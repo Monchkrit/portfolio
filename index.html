@@ -9,14 +9,13 @@
 			rel="stylesheet" 
 			type="text/css" 
 			href="prism-atom-dark.css"
-			media="screen"
-		/>
+			media="screen" />
 
 		<script type="text/javascript" src="prism.js"></script>
 		<script type="text/javascript" src="prism.ruby.js"></script>
 
 		<title>Donny Buckman</title>
-		<meta name="description" content="Donny Buckman is an IT professional with specialized training in full-stack development. He has extensive IT experience and skills training with Ruby, Rails, JavaScript, Java, and building web applications."
+		<meta name="description" content="Donny Buckman is an IT professional with specialized training in full-stack development. He has extensive IT experience and skills training with Ruby, Rails, JavaScript, Java, and building web applications.">
 	</head>
 	<body>
 		<div class="about-container">
@@ -126,9 +125,76 @@ entry = gets.chomp.to_i
 play_foobar(entry)</code></pre>
 
 		</div>
+<br class="clear" />
+    <div class="box">
+      <h4>Image Blur</h4>
+      <p>
+        This program takes an input to say how far to blur from the points in the matrix that begin with a 1 in them. The array can be 4 items tall, but any width.
+      </p>
+    </div>
+
+    <div>
+      <pre><code class="language-ruby">class Image
+
+  # Here is my initializer. It is formatted per the spec from Coding Boot Camp that the array should be made from 4 arrays
+  # or a two-dimensional array.
+  def initialize(arr1, arr2, arr3, arr4)
+    @image = []
+    @row1 = [arr1]
+    @row2 = [arr2]
+    @row3 = [arr3]
+    @row4 = [arr4]
+    @image = [arr1, arr2, arr3, arr4]
+  end
+
+  def output_image
+    @image.each do |x|
+      x.each do |cell|
+        print cell
+                # This looks down from the rows
+                if i &lt; @length - 1
+                  if @image[i+1][j] == 0
+                    @image[i+1][j] = 2
+                  end
+                end
+
+                # This looks up from the rows
+                if i &gt; 0 &amp;&amp; @image[i-1][j] == 0
+                  @image[i-1][j] = 2 
+                end
+
+                # This looks to the right until it gets to the end.
+                if @image[i][j+1] == 0
+                  @image[i][j+1] = 2
+                end
+
+               # This looks to te left. I tried to set this so it will never look over the side of the array.
+               # I'm afraid of what might happen if my program does that too muc.
+                if j &gt; 0 &amp;&amp; @image[i][j - 1] == 0
+                  @image[i][j - 1] = 2
+                end
+end
+image = Image.new([0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 0, 0, 0],
+                  [0, 0, 0, 0, 0, 1, 0],
+                  [0, 0, 0, 0, 0, 0, 0])
+image.output_image
+image.blur_image(5)
+image.output_image
+</code></pre>
+    </div>
+
 		<br class="clear" />
 		<h3 id="web-apps">Web Apps</h3>
 		<hr class="yellow" />
+
+    <div class="box">
+      <h4><a href="https://plantformproto.herokuapp.com">Regenerative Agriculture</a></h4>
+      <img src="images/PlantForm-TradeMark-NoBack-FB.jpg" class="full-width" />
+      <p>
+        A location specific gardening and farming application for regenerative agriculture.
+      </p>
+    </div>
 
 		<div class="box">
 			<h4><a href="https://splurty-donny-buckman.herokuapp.com">Quote Generator</a></h4>
