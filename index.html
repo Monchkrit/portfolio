@@ -1,7 +1,11 @@
 <DOCTYPE html>
+<html lang="en">
 <html>
 
 	<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<link rel="stylesheet" type="text/css" href= "style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i" rel="stylesheet">
 
@@ -18,239 +22,268 @@
 		<meta name="description" content="Donny Buckman is an IT professional with specialized training in full-stack development. He has extensive IT experience and skills training with Ruby, Rails, JavaScript, Java, and building web applications.">
 	</head>
 	<body>
-		<div class="about-container">
-			<ul>
-				<li><a href="#" class="nav-link">About</a></li>
-				<li><a href="#code-samples" class="nav-link">Code Samples</a></li>
-				<li><a href="#web-apps" class="nav-link">Web Apps</a></li>
-				<li><a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a></li>
-				<li class="hire-me"><a href="#hire-me" class="nav-link">Hire Me</a></li>
-			</ul>
-
-			<div class="about">
-
-				<img src="images/me.jpg" class="me" />
-				<h1>
-					Donny Buckman
-				</h1>
-				<h2>
-					SOFTWARE DEVELOPER
-				</h2>
-				<hr class = "grey"/>
-				<p class="bio">
-				My first programming experience was with my best friend Mario when I was 8 years old. His dad bought him a Timex Sinclair 1000, and we spent the summer programming it to bounce balls and interact through text input/output. I gained further programming experience when I received a Commodore Vic 20 for Christmas when I was 11. I have a masters degree in information systems and 15 years of professional experience as a desktop support technician and systems administration. I spent the last few years teaching 5th grade as a full time general education teacher. During my teaching career I have completed the teacher credential training program called CalSTATE TEACH. I became vegan on July 20, 2018. I run and do other kinds of exercise several times per week. I am married with three kids and four grand kids.
-				</p>
-			</div>
-		</div>
-		<h3 id="code-samples">Code Snippets</h3>
-		<hr class = "yellow">
-
-		<div class="box">
-			<h4>Temperature Conversion</h4>
-			<p>
-				This Ruby program will prompt the user for a temperature in degrees Celsius and let the user know what the corresponding temperature is in Fahrenheit.
-			</p>
-		</div>
-
-		<div class="box">
-
-<pre><code class="language-ruby">
-def celsiusToFahrenheit(c)
-    return c * 9/5 + 32
-end
-puts &quot;Please enter a celsius temperature and I will convert it to farenheit. &quot;
-c = gets.to_f
-f = celsiusToFahrenheit(c)
-puts &quot;The correct fahrenheit temperature for #{c} is #{f}&quot;</code></pre>
-		</div>
-		<br class="clear" />
-
-		<div class="box">
-			<pre><code class="language-ruby">puts &quot;Please enter a number.&quot;
-num = gets.chomp.to_i
-
-def set_ordinal(num)
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand">Donny Buckman Portfolio</a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+      <ul class="navbar-nav mr-auto offset-md-4">
+        <li class="nav-item active">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#code-samples" class="nav-link">Code Samples</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#web-apps" class="nav-link">Web Apps</a>
+        </li>
+        <li class="nav-item active">
+          <a href="#skills-and-tools" class="nav-link">Skills &amp; Tools</a>
+        </li>
+        <li class="nav-item active hire-me">
+          <a href="#hire-me" class="badge badge-primary">Hire Me</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <div class="container-fluid">
+      <div class="about-container">
+          <img src="images/me.jpg" class="me center" />
+        <h1>
+          Donny Buckman
+        </h1>
+        <h2>
+          SOFTWARE DEVELOPER
+        </h2>
+        <br />
+        <hr class = "grey"/>
+        <p class="bio">
+        My first programming experience was with my best friend Mario when I was 8 years old. His dad bought him a Timex Sinclair 1000, 
+        and we spent the summer programming it to bounce balls and interact through text input/output. I gained further programming 
+        experience when I received a Commodore Vic 20 for Christmas when I was 11. I have a masters degree in information systems and 15 
+        years of professional experience as a desktop support technician and systems administrator. I spent the last few years 
+        teaching 5th grade as a full time general education teacher. During my teaching career I have completed the teacher credential training 
+        program called CalSTATE TEACH.
+        </p>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <h3 id="code-samples">Code Snippets</h3>
+      <hr class = "yellow">
     
-right_digit = num % 10
-    if num &gt;= 11 &amp;&amp; num &lt;= 13
-        puts &quot;That's the #{num}th item.&quot;
-    elsif right_digit == 1
-        puts &quot;That's the #{num}st item.&quot;
-    elsif right_digit == 2
-        puts &quot;That's the #{num}nd item.&quot;
-    elsif right_digit == 3
-        puts &quot;That's the #{num}rd item.&quot;
-    else puts &quot;That's the #{num}th item.&quot;
-    end
+      <div class="row justify-content-md-center">
+        <div class="box btxt">
+          <h4>Temperature Conversion</h4>
+          <p>
+            This Ruby program will prompt the user for a temperature in degrees Celsius and let the user know what the corresponding temperature is in Fahrenheit.
+          </p>
+        </div>
+
+        <div class="box">
+          <pre><code class="language-ruby">
+          def celsiusToFahrenheit(c)
+              return c * 9/5 + 32
+          end
+          puts &quot;Please enter a celsius temperature and I will convert it to farenheit. &quot;
+          c = gets.to_f
+          f = celsiusToFahrenheit(c)
+          puts &quot;The correct fahrenheit temperature for #{c} is #{f}&quot;</code></pre>
+        </div>
+      </div>
+
+    <div class="row justify-content-md-center">
+      <div class="box">
+        <pre><code class="language-ruby">puts &quot;Please enter a number.&quot;
+          num = gets.chomp.to_i
+
+          def set_ordinal(num)
+              
+          right_digit = num % 10
+              if num &gt;= 11 &amp;&amp; num &lt;= 13
+                  puts &quot;That's the #{num}th item.&quot;
+              elsif right_digit == 1
+                  puts &quot;That's the #{num}st item.&quot;
+              elsif right_digit == 2
+                  puts &quot;That's the #{num}nd item.&quot;
+              elsif right_digit == 3
+                  puts &quot;That's the #{num}rd item.&quot;
+              else puts &quot;That's the #{num}th item.&quot;
+              end
+              
+          end
+
+          set_ordinal(num)</code></pre>
+        </div>
+
+        <div class="box btxt">
+          <h4>Ordinal Challenge</h4>
+          <p>
+            This Ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+
+        </div>
+      </div>
+
+      <div class="row justify-content-md-center">
+        <div class="box btxt">
+          <h4>Foobar</h4>
+          <p>
+            This Ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
+          </p>
+        </div>
+
+        <div class="box">
+          <pre><code class="language-ruby">def play_foobar(entry)
+            i = 1
+            while i &lt;= entry
+                if i &gt;= 3 &amp;&amp; i % 3 == 0 &amp;&amp; i % 5 == 0
+                    puts (&quot;foobar&quot;)
+                elsif i &gt;= 3 &amp;&amp; i % 3 == 0
+                    puts (&quot;foo&quot;)
+                elsif i &gt;= 3 &amp;&amp; i % 5 == 0
+                    puts (&quot;bar&quot;)
+                else
+                    puts(i)
+                end
+            i += 1
+            end
+            end
+
+            puts (&quot;What number do you want to start the game foobar with?&quot;)
+            entry = gets.chomp.to_i
+            play_foobar(entry)</code></pre>
+        </div>
+      </div>
+
     
-end
+      <div class="box">
+        <pre><code class="language-ruby">class Image
 
-set_ordinal(num)</code></pre>
-		</div>
+          # Here is my initializer. It is formatted per the spec from Coding Boot Camp that the array should be made from 4 arrays
+          # or a two-dimensional array.
+          def initialize(arr1, arr2, arr3, arr4)
+            @image = []
+            @row1 = [arr1]
+            @row2 = [arr2]
+            @row3 = [arr3]
+            @row4 = [arr4]
+            @image = [arr1, arr2, arr3, arr4]
+          end
 
-		<div class="box">
-			<h4>Ordinal Challenge</h4>
-			<p>
-				This Ruby program will convert a plain number to the ordinal of the number. So for example, if the user enters 2, it will display 2nd, if the user enters 3, it will display 3rd, etc.
+          def output_image
+            @image.each do |x|
+              x.each do |cell|
+                print cell
+                        # This looks down from the rows
+                        if i &lt; @length - 1
+                          if @image[i+1][j] == 0
+                            @image[i+1][j] = 2
+                          end
+                        end
 
-		</div>
-		<br class="clear" />
+                        # This looks up from the rows
+                        if i &gt; 0 &amp;&amp; @image[i-1][j] == 0
+                          @image[i-1][j] = 2 
+                        end
 
-		<div class="box">
-			<h4>Foobar</h4>
-			<p>
-				This Ruby program is an adaptation of a classic technical interview problem which displays sequences of the Foobar pattern.
-			</p>
-		</div>
+                        # This looks to the right until it gets to the end.
+                        if @image[i][j+1] == 0
+                          @image[i][j+1] = 2
+                        end
 
-		<div class="box">
-			<pre><code class="language-ruby">def play_foobar(entry)
-    i = 1
-    while i &lt;= entry
-        if i &gt;= 3 &amp;&amp; i % 3 == 0 &amp;&amp; i % 5 == 0
-            puts (&quot;foobar&quot;)
-        elsif i &gt;= 3 &amp;&amp; i % 3 == 0
-            puts (&quot;foo&quot;)
-        elsif i &gt;= 3 &amp;&amp; i % 5 == 0
-            puts (&quot;bar&quot;)
-        else
-            puts(i)
+                      # This looks to te left. I tried to set this so it will never look over the side of the array.
+                      # I'm afraid of what might happen if my program does that too muc.
+                        if j &gt; 0 &amp;&amp; @image[i][j - 1] == 0
+                          @image[i][j - 1] = 2
+                        end
         end
-    i += 1
-    end
-end
+        image = Image.new([0, 0, 0, 0, 0, 0, 0],
+                          [0, 0, 0, 0, 0, 0, 0],
+                          [0, 0, 0, 0, 0, 1, 0],
+                          [0, 0, 0, 0, 0, 0, 0])
+        image.output_image
+        image.blur_image(5)
+        image.output_image
+        </code></pre>
+      </div>
+      <div class="row justify-content-md-center">
+          <div class="box btxt">
+            <h4>Image Blur</h4>
+            <p>
+              This program takes an input to say how far to blur from the points in the matrix that begin with a 1 in them. The array can be 4 items tall, but any width.
+            </p>
+        </div>
+      </div>
 
-puts (&quot;What number do you want to start the game foobar with?&quot;)
-entry = gets.chomp.to_i
-play_foobar(entry)</code></pre>
-
-		</div>
-<br class="clear" />
-    <div class="box">
-      <h4>Image Blur</h4>
-      <p>
-        This program takes an input to say how far to blur from the points in the matrix that begin with a 1 in them. The array can be 4 items tall, but any width.
-      </p>
-    </div>
-
-    <div>
-      <pre><code class="language-ruby">class Image
-
-  # Here is my initializer. It is formatted per the spec from Coding Boot Camp that the array should be made from 4 arrays
-  # or a two-dimensional array.
-  def initialize(arr1, arr2, arr3, arr4)
-    @image = []
-    @row1 = [arr1]
-    @row2 = [arr2]
-    @row3 = [arr3]
-    @row4 = [arr4]
-    @image = [arr1, arr2, arr3, arr4]
-  end
-
-  def output_image
-    @image.each do |x|
-      x.each do |cell|
-        print cell
-                # This looks down from the rows
-                if i &lt; @length - 1
-                  if @image[i+1][j] == 0
-                    @image[i+1][j] = 2
-                  end
-                end
-
-                # This looks up from the rows
-                if i &gt; 0 &amp;&amp; @image[i-1][j] == 0
-                  @image[i-1][j] = 2 
-                end
-
-                # This looks to the right until it gets to the end.
-                if @image[i][j+1] == 0
-                  @image[i][j+1] = 2
-                end
-
-               # This looks to te left. I tried to set this so it will never look over the side of the array.
-               # I'm afraid of what might happen if my program does that too muc.
-                if j &gt; 0 &amp;&amp; @image[i][j - 1] == 0
-                  @image[i][j - 1] = 2
-                end
-end
-image = Image.new([0, 0, 0, 0, 0, 0, 0],
-                  [0, 0, 0, 0, 0, 0, 0],
-                  [0, 0, 0, 0, 0, 1, 0],
-                  [0, 0, 0, 0, 0, 0, 0])
-image.output_image
-image.blur_image(5)
-image.output_image
-</code></pre>
-    </div>
-
-		<br class="clear" />
-		<h3 id="web-apps">Web Apps</h3>
-		<hr class="yellow" />
-
-    <div class="box">
-      <h4><a href="https://plantformproto.herokuapp.com">Regenerative Agriculture</a></h4>
-      <img src="images/PlantForm-TradeMark-NoBack-FB.jpg" class="full-width" />
-      <p>
-        A location specific gardening and farming application for regenerative agriculture.
-      </p>
-    </div>
-
-		<div class="box">
-			<h4><a href="https://splurty-donny-buckman.herokuapp.com">Quote Generator</a></h4>
-			<img src="images/splurty.png" class="full-width" />
-			<p>
-				A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
-			</p>
-		</div>
-		<div class="box">
-      <h4><a href="https://nomster-donny-buckman.herokuapp.com">Yelp Clone</a></h4>
-      <img src="images/nomster.png" class="full-width" />
-      <p>
-        A Yelp clone that integrates with the Google Maps API
-        and includes features like user comments, star ratings,
-        image uploading, and user authentication.
-      </p>
-    </div>
     <br class="clear" />
 
-    <div class="box">
-      <h4><a href="https://flixter-donny-buckman.herokuapp.com">Two-Sided Market Place</a></h4>
-      <img src="images/flixter.png" class="full-width" />
-      <p>
-        A two-sided, video-streaming marketplace platform that
-        features credit card payment capabilities, user role
-        management, complex user interfaces, and advanced
-        database relationships.
-      </p>
-    </div>
-    <div class="box">
-      <h4>Test Driven Development</h4>
-      <img src="images/grammable.png" class="full-width" />
-      <p>
-        An Instagram clone that was built using industry-standard, test-driven
-        development following numerous red/green/refactor cycles.
-      </p>
-    </div>
-    <br class="clear" />
-    <div class="box">
-      <h4>Single Page Todo Application</h4>
-      <img src="images/todoster.png" class="full-width" />
-      <p>
-        This single-page to-do application features a
-        fluid user interface that– by using JavaScript–
-        allows users to rapidly add dynamic content.
-      </p>
-    </div>
-    <div class="box">
-      <h4>Agile Team Project</h4>
-      <img src="images/chess.png" class="full-width" />
-      <p>
-        Worked on an Agile software development team building
-        a chess application. Under the guidance of a senior software engineer,
-        we had weekly Agile team meetings for code reviews, sprint planning,
-        and feature assignments.
-      </p>
+    <div class="container-fluid">
+      <h3 id="web-apps">Web Apps</h3>
+      <hr class="yellow" />
+      <div class="row justify-content-md-center">
+        <div class="box">
+          <h4><a href="https://plantformproto.herokuapp.com">Regenerative Agriculture</a></h4>
+          <img src="images/PlantForm-TradeMark-NoBack-FB.jpg" class="full-width" />
+          <p>
+            A location specific gardening and farming application for regenerative agriculture.
+          </p>
+        </div>
+
+      <div class="box">
+        <h4><a href="https://splurty-donny-buckman.herokuapp.com">Quote Generator</a></h4>
+        <img src="images/splurty.png" class="full-width" />
+        <p>
+          A database-powered quote generator with a mobile-first design, using the Ruby on Rails framework, HTML, and CSS. Uses Git and GitHub for version control, and launched on Heroku.
+        </p>
+      </div>
+      <div class="box">
+        <h4><a href="https://nomster-donny-buckman.herokuapp.com">Yelp Clone</a></h4>
+        <img src="images/nomster.png" class="full-width" />
+        <p>
+          A Yelp clone that integrates with the Google Maps API
+          and includes features like user comments, star ratings,
+          image uploading, and user authentication.
+        </p>
+      </div>
+
+        <div class="box">
+          <h4><a href="https://flixter-donny-buckman.herokuapp.com">Two-Sided Market Place</a></h4>
+          <img src="images/flixter.png" class="full-width" />
+          <p>
+            A two-sided, video-streaming marketplace platform that
+            features credit card payment capabilities, user role
+            management, complex user interfaces, and advanced
+            database relationships.
+          </p>
+        </div>
+        <div class="box">
+          <h4><a href="https://grammable-donny-buckman.herokuapp.com">Test Driven Development</a></h4>
+          <img src="images/grammable.png" class="full-width" />
+          <p>
+            An Instagram clone that was built using industry-standard, test-driven
+            development following numerous red/green/refactor cycles.
+          </p>
+        </div>
+        <div class="box">
+          <h4>Single Page Todo Application</h4>
+          <img src="images/todoster.png" class="full-width" />
+          <p>
+            This single-page to-do application features a
+            fluid user interface that– by using JavaScript–
+            allows users to rapidly add dynamic content.
+          </p>
+        </div>
+        <div class="box">
+          <h4>Agile Team Project</h4>
+          <img src="images/chess.png" class="full-width" />
+          <p>
+            Worked on an Agile software development team building
+            a chess application. Under the guidance of a senior software engineer,
+            we had weekly Agile team meetings for code reviews, sprint planning,
+            and feature assignments.
+          </p>
+        </div>
+      </div>
     </div>
     <br class="clear" />
     <h3 id="skills-and-tools">Skills &amp; Tools</h3>
@@ -276,9 +309,11 @@ image.output_image
 		</p>
 
 		<p>
-			<a href="mailto:blitzkritter@gmail.com" class="contact-link"> blitzkritter@gmail.com
-			</a>
+      <a href="mailto:monchkrit@gmail.com" class="contact-link">monchkrit@gmail.com</a>
+      <br />
+      <a href="https://docs.google.com/document/d/17e4j5omtNDIDhDyehrejds90-PYTNfRZ0JMzTdGTRhI/edit?usp=sharing" class="contact-link">Personal Resume</a>
 		</p>
-	</div>
+  </div>
+  </div>
 	</body>
 </html>
