@@ -40,8 +40,7 @@ p {
 }
 
 .me {
-	height: 150px;
-	border-radius: 100%;
+	height: 125px;
 	border-style: solid;
 	border-color: beige;
 	display: block;
